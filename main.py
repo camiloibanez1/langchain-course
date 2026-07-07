@@ -11,7 +11,7 @@ load_dotenv()  # Load environment variables from .env file
 
 def main():
     print("Hello from langchain-course!")
-    #print("OPENAI_API_KEY:", os.getenv("OPENAI_API_KEY"))
+    # print("OPENAI_API_KEY:", os.getenv("OPENAI_API_KEY"))
     information = """
     Martin Reisman (February 1, 1930 – December 7, 2012) was an American table tennis player and author.[1] He won the U.S. Men's Singles Championship in 1958 and 1960 and the U.S. Hardbat Championship in 1997.[2] He advocated the traditional hardbat style of table tennis.
 
@@ -34,9 +34,7 @@ def main():
     #     temperature=0,
     # )
 
-    llm = ChatGoogleGenerativeAI(
-        model="gemini-3.5-flash"
-    )
+    llm = ChatGoogleGenerativeAI(model="gemini-3.5-flash")
 
     # llm = ChatOllama(
     #     model="gemma3:270m",
@@ -47,6 +45,7 @@ def main():
     response = chain.invoke({"information": information})
     # print(response.content)
     print(response.content[0]["text"])
+
 
 if __name__ == "__main__":
     main()

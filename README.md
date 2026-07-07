@@ -1,3 +1,8 @@
+#### activate virtual environment
+```
+Set-ExecutionPolicy Unrestricted -Scope Process
+.\.venv\Scripts\activate
+```
 # LangChain- Develop AI Agents with LangChain & LangGraph 🦜🔗
 
 **Learn LangChain and LangGraph by building real world AI Agents (Python, Latest Version V.1.0+)**
